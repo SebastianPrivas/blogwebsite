@@ -1,0 +1,7 @@
+<div *ngIf='blog' class='grid-container'>
+  <h1 class="mat-h1">{{blog.title}}</h1>
+  <img matCardImage [src]='blog.imagePath' alt=''/>
+  <div class='mat-body-1'>
+    {{blog.description}}
+  </div>
+</div>
