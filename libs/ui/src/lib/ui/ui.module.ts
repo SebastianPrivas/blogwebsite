@@ -16,6 +16,7 @@ import { MatRippleModule } from '@angular/material/core';
 import { BlogsComponent } from './blogs/blogs.component';
 import { BlogService } from '../services/blog.service';
 import { MatListModule } from '@angular/material/list';
+import {APP_BASE_HREF} from '@angular/common';
 
 const appRoutes: Routes = [
   { path: '', component: HomeComponent },
@@ -37,7 +38,7 @@ const appRoutes: Routes = [
     MatListModule
   ],
   declarations: [NavComponent, HomeComponent, BlogsComponent],
-  providers: [BlogService],
+  providers: [BlogService, {provide: APP_BASE_HREF, useValue: ''}],
   exports: [NavComponent, HomeComponent, BlogsComponent],
 })
 export class UiModule {}
